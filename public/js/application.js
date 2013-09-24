@@ -7,8 +7,8 @@ player2 = $('#player2').text();
 var start = $.now();
 
 // $("#player1_strip ." + position + " img").attr('src',"http://i2.minus.com/jeUfdFPTE2O1M_e.jpg"
-  $('input').on('keyup', function(e) {
-    var code = e.keyCode || e.which;
+  $(document).on('keyup', function(e) {
+    code = e.keyCode || e.which;
     if (code === 65 && position1 <= 8) {
     $("#player1_strip ." + (position1 - 1) + " img").attr('src',"http://rlv.zcache.com/black_square_formal_party_or_event_invitation-r2010155778ca4a669b3772131bad7f23_8dnmw_8byvr_50.jpg");
     $("#player1_strip ." + position1 + " img").attr('src',"http://i2.minus.com/jeUfdFPTE2O1M_e.jpg");
@@ -22,18 +22,26 @@ var start = $.now();
      if (position1 === 9){
       var end = $.now();
       time = ((end-start) / 1000);
-      $.post( "/winner", { winner_name: player1, player1: player1, player2: player2, time: time} );
-      $('input').keydown(false);
-      // alert("Player 1 wins!");
-    
+       $('tr').remove();
+      $('input').remove();
+       $(this).unbind("keyup");
+      $.post( "/winner", { winner_name: player1, player1: player1, player2: player2, time: time}, function(result){
+      $('body').append(result)
+      alert("Player 1 wins!")
+      });
      }
+
      if (position2 === 9){
       var end = $.now();
       time = ((end-start) / 1000);
-      $.post( "/winner", { winner_name: player2, player1: player1, player2: player2, time: time} );
-      $('input').keydown(false);
-      // alert("Player 2 wins!");
-     }
+      $('tr').remove();
+      $('input').remove();
+       $(this).unbind("keyup");
+        $.post( "/winner", { winner_name: player2, player1: player1, player2: player2, time: time},function(result){
+        $('body').append(result)
+        alert("Player 2 wins!")
+       });
+      }
       
 
 

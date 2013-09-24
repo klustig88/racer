@@ -1,0 +1,42 @@
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+}
+th {
+  text-align: left;
+}
+
+.signup{
+background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #DFF700 100%);
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+box-sizing: border-box;
+display: block;
+font-family: sans-serif;
+height: 111px;
+margin-right: 20%;
+margin-left: 20%;
+margin-top: 5%;
+padding-bottom: 20px;
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 20px;
+width: 360px;
+}
+
+h1 {
+ font-family: 'Playball', cursive;
+  margin-right: 27%;
+margin-left: 27%;
+}
+
+.start {
+background: black;
+color: white;
+box-shadow: 5px 5px 3px black;
+border-radius: 5px;
+}

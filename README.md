@@ -6,5 +6,12 @@ The board is generated through HTML and CSS while the movement of the players is
 Javascript and jQuery.
 
 
+To run it, please download this repository and in the command line run:
+
+~> bundle install
+
+~> shotgun to run the application
 
 
+
+Enjoy! Please reach out if you have any questions

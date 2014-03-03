@@ -10,6 +10,10 @@ To run it, please download this repository and in the command line run:
 
 ~> bundle install
 
+~> rake db:create
+
+~> rake db:migrate
+
 ~> shotgun to run the application
 
 
